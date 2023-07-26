@@ -34,7 +34,7 @@ function calculateTime() {
         hourBox.textContent = addLeadingZero(result.hours);
         minBox.textContent = addLeadingZero(result.minutes);
         secBox.textContent = addLeadingZero(result.seconds);
-        if (needWait <= 0) {
+        if (minBox.textContent === '00' & secBox.textContent === '00') {
             clearInterval(timerID);
         }
     }, 1000);
